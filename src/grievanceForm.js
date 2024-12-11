@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Styles/Form.css';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import logo from './images/jjm_logo.png'
 import leakage from './images/leakage.png'
@@ -36,7 +37,7 @@ function GrievanceForm() {
     const handleSubmit = (values)=>{
         
         console.log(values);
-        fetch(`${serverURL}/grievance`,{
+        fetch(`${serverURL}/submitComplaint`,{
             method:'POST',
             body:JSON.stringify(values),
             headers:{
